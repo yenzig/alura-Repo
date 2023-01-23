@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>	
+	<head>
+		<meta charset="UTF-8">
+		<title>CONTACTO - TAQUESHY</title>
+		<link rel="stylesheet" href="reset.css"   >
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<header>
+			<div class ="box ">
+				<h1><img src="pictures/log.jpg" alt="Logo TaQueShi"></h1>
+			<nav>
+			<ul>
+				<li><a href="CSSHTML1.html">Inicio</a></li>
+				<li><a href="productos.html">Productos</a></li>
+				<li><a href="contact.html">Contacto</a></li>
+			</ul>
+			</nav>
+			 </div>
+		</header>
+
+		<main>
+			<form>
+				<label for="nombreyapellido">Nombre y Apellido</label>
+				 <input type="text" id="nombreyapellido " class="input-padron" required>
+
+				<label for="email">Correo Electronico</label>
+				 <input type="email" id="email " class="input-padron" required placeholder="email@dominio.com">
+
+
+				<label for="phone">Telefono</label>
+				 <input type="tel" id="phone" class="input-padron" required placeholder="(XX)XXXX-XXXX">
+
+				 <label for="MESSAGE"></label>
+				<textarea cols ="70" rows="10" id="MESSAGE" class="input-padron"> </textarea>	 
+
+			 <fieldset>
+				<legend>WHAT CAN WE CONTACT TO YOU?</legend>
+
+				<label  for ="radio-email">
+				 <input type="radio" name="contact" value="email" id="radio-email"> E-MAIL</label>
+				 
+				 <label  for ="radio-phone">
+				 <input type="radio" name="contact" value="phone" id="radio-phone">CALL-PHONE</label>
+
+				 <label  for ="radio-wasa">
+				 <input type="radio" name="contact" value="whatsapp" id="radio-wasa" checked>WHATSAPP</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>What time do you wanto to be contacted?</legend>
+				<select class="contact-way">
+					<option>Morning</option>
+					<option>Afternoon</option>
+					<option>Evenin</option>
+				</select>		
+			</fieldset>	
+
+				<label class="ckeckbox">
+					<input type="checkbox" checked>DO YO WANT TO RECEIVE INFO ABOUT THE TaQueShi?</label>
+
+				 <input type="submit" value="SEND MY INFO" class="send">
+			</form>
+
+			<table>
+				<thead>
+				<tr>
+					<td>ABLE DAYS</td>
+					<td>TIME</td>
+				</tr>
+				</thead>
+
+				<tbody>
+				<tr>
+					<td>THURSDAY</td>
+					<td>17h - 00h</td>
+				</tr>
+
+				<tr>
+					<td>FRAIDAY</td>
+					<td>17h - 00h</td>
+				</tr>
+
+				<tr>
+					<td>SATURDAY</td>
+					<td>17h - 00h</td>
+				</tr>
+			</tbody>
+			</table>
+			
+		</main>
+
+		<footer>
+				<img src="pictures/log.jpg" alt="Logo TaQueShi">
+				<p class="deres">&copy Copyright TaQueShi-2023</p>
+			</footer>

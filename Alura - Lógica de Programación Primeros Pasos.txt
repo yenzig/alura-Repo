@@ -1,0 +1,1688 @@
+html 1.0 :
+
+<h1>My first program HTML</br>
+<br>
+<br>
+Is this a real program?
+
+--------------------------------------------------------------------
+
+La etiqueta <h1> es usada para exhibir el primer 
+título de una página. Veamos un ejemplo:
+
+<h1>Bienvenido</h1>
+
+El contenido de la TAG h1 "Bienvenido" será exhibido en destaque en 
+la página. 
+
+Vea que el texto está entre la etiqueta de apertura <h1> y la de 
+cierre </h1>, por eso podemos decir que "Bienvenido" es el contenido 
+de la etiqueta <h1>.
+
+Para crear links usamos la etiqueta <a> (ancora). 
+Esa etiqueta funciona de la siguiente manera:
+Visite <a href="http://www.aluracursos.com"> Alura Latam</a>
+
+Los Navegadores son poliglotas
+
+HTML NO permite trabajar de forma dinamica usando variables :(
+JavaScript SI
+--------------------------------------------------------------------
+POP UP:
+
+<script> 
+	alert("Esto si es lenguage de programacion");
+</script>
+--------------------------------------------------------------------
+
+Todo código escrito en JavaScript debe estar dentro de la etiqueta 
+<script>. Veamos un ejemplo que exhibe un alert en la pantalla:
+
+<meta charset="UTF-8">
+
+<h1>Usando JavaScript por primera vez</h1>
+
+<script>
+    alert("Este es un pop-up en JavaScript");
+</script>
+
+Esto está fuera de JavaScript...
+
+Piensa que todo lo que está entre <script>…</script>, 
+está en el mundo JavaScript. 
+
+Siendo así, el navegador interpretará ese trecho como JavaScript. 
+Todo aquello que está escrito fuera de <script>…</script>,
+es considerado mundo HTML y será interpretado como HTML.
+
+Existe una convención que establece el uso de etiquetas en letras 
+minúsculas en HTML, sin embargo, si usamos letras mayúsculas, para 
+el navegador no habrá diferencia alguna.
+------------------------------------------------------------------------
+
+<meta charset="UTF-8">
+
+<script>
+    document.write("Texto 1 <br>");
+    document.write("Esto es solo texto <br>");
+    document.write("Texto 2 <br>");
+    document.write("Texto 2"+ 5 + 4/2);
+
+</script>
+-------------------------------------------------------------------------
+
+Si observas, estamos usando el operador de suma envolviendo dos textos 
+(dos strings). En este caso, JavaScript irá a concatenar, o sea, 
+juntar el texto antes del + con el texto que viene después. 
+
+Por eso el resultado final es “182” que será pasado para document.
+write como parámetro. Es bueno recordar que JavaScript primero evalúa
+ la operación (suma) antes de pasar para los () de la instrucción.
+
+Comprender aún más lo que sucede
+Próxima Actividad
+
+Veamos el ejemplo del programa, entendiendo_dos_mundos.html.
+
+ El contenido es:
+
+<meta charset="UTF-8">
+<script>
+    document.write("Estoy escribiendo desde el mundo JavaScript 
+	en el mundo HTML");
+</script>
+
+Observa, en la instrucción document.write está entre () el texto:
+ "Estoy escribiendo desde el mundo JavaScript en el mundo HTML". 
+
+Cuando usamos document.write, dentro del script, en realidad estamos 
+escribiendo en el mundo HTML, es decir, lo que veremos es un resultado 
+HTML.
+
+Para los que están comenzando, puede parecer extraño, ya que podemos 
+hacer lo mismo escribiendo el texto directamente en el mundo HTML como
+en el siguiente ejemplo:
+
+<meta charset="UTF-8">
+Estoy escribiendo desde el mundo JavaScript en el mundo HTML
+<script>
+
+</script>
+
+Recuerda que todo lo que esté entre las etiquetas <script> y </script> 
+es considerado por el navegador como código JavaScript y todo lo que 
+está fuera de las etiquetas, no importa en qué lugar, es código HTML. 
+
+Un ejemplo más:
+
+<meta charset="UTF-8">
+Estoy escribiendo desde el mundo JavaScript en el mundo HTML
+<script>
+
+</script>
+Aquí también estamos en el mundo HTML, porque está fuera de la 
+etiqueta script
+
+La ventaja es que con el document.write podemos pasar al resultado 
+de un cálculo y, entre otras cosas, de manera dinámica ya que el mundo
+ HTML no es capaz de realizar operaciones matemáticas.
+
+De este modo, podemos hacer lo siguiente:
+
+<meta charset="UTF-8">
+<script>
+    document.write(10 + 20);
+</script>
+
+En este caso, el document.write recibe dentro de () el resultado de la
+operación que es 30. El document.write permite conectar con HTML y 
+presentar en el mundo HTML cualquier cosa que deseemos. 
+
+Lo que estamos pasando para HTML puede ser el resultado de una lógica 
+de programación más complicada. ¿Quieres una prueba más de que el 
+document.write pertenece al mundo JavaScript y que se puede escribir
+en el mundo HTML? Veamos un ejemplo más:
+
+<meta charset="UTF-8">
+<script>
+    document.write("<h1>Sea bienvenido</h1>");
+</script>
+
+Observa que estamos escribiendo en el mundo JavaScript y pasando al 
+mundo HTML el texto "<h1>Sea bienvenido</h1>". 
+
+Si este código forma parte del mundo HTML, el navegador va a 
+interpretarlo como HTML y va a colocar el texto resaltado, 
+pues estamos usando la etiqueta <h1>. El resultado sería el mismo 
+que si hubiésemos escrito directamente en el mundo HTML:
+
+<meta charset="UTF-8">
+<h1>Sea bienvenido</h1>
+<script>
+</script>
+
+Finalmente, no es posible escribir instrucciones de JavaScript en el 
+mundo HTML:
+
+<meta charset="UTF-8">
+document.write("Sea bienvenido");
+<script>
+</script>
+
+HTML no entiende que debe mostrar el texto pasado por la instrucción, 
+tan solo imprime la instrucción y no su resultado. Así que presta 
+mucha atención cada vez que escribas tu código.
+
+Lo que aprendimos
+
+    Convenios y buenas prácticas de programación.
+    A concatenar caracteres (strings).
+    Operaciones conjuntas entre textos y números.
+
+--------------------------------------------------------------------------------
+Variables:
+
+var i = 1;
+var anios = 2022;
+document.write("Valor de i = " + i);
+document.write("Mi EDAD:" +(anios-1983));
+
+clear()
+
+----------------------------------------------------------------------------------
+
+El codigo se ejecuta de forma secuencial de arriba hacia abajo
+
+Math.round();
+
+var EDAD1 = 10;
+    var EDAD2 = "20";
+    var EDAD3 = 12;
+    document.write("La media de las edades es <br>");
+    document.write( (EDAD1 + EDAD2 + EDAD3) / 3);
+
+------------------------------------------------------------------------------------------
+¡Correcto! 
+
+De la forma como fueron declaradas las variables el resultado será:
+
+ "La media de las edades es 34004".
+
+El principal problema de esta historia es la declaración errada de la 
+variable EDAD2, la cual fue declarada como string.
+
+Lo que aprendimos:
+
+    A usar variables para reducir código.
+    Secuencia de la ejecución de nuestro código.
+    Diferentes tipos de datos en las variables y fórmulas.
+    Buenas prácticas de programación: Nomenclatura de variables.
+
+En JavaScript tenemos una función llamada parseInt(), que, en otras palabras,
+analizará la string y devolverá un número entero. Ahora, usando la función, 
+el código de la aplicación se ve así:
+
+		const sueldoFormateado = parseInt(sueldo);
+-------------------------------------------------------------------------------------
+Salto de linea:
+
+		document.write("\n");
+		document.write(<br>);
+--------------------------------------------------------------------------------------
+Funciones
+	  function salta() {
+		document.write("<br>");
+	}
+
+	salta();
+	document.write("TEXTO");
+	salta();
+	document.write("texto");
+-------------------------------------------------------------------------------------
+<meta charset="UTF-8">
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+    }
+
+    var miEdad = 18;
+    var edadHermano = 15;
+
+    imprimir("Nuestra diferencia de edad es " + (miEdad - edadHermano));
+ </script>
+
+----------------------------------------------------------------------------------------
+ Lo que aprendimos
+
+    Al crear funciones.
+    Usar la consola de desarrollador para identificar errores y acompañar las variables.
+    Buenas prácticas de programación: Nomenclatura de funciones.
+    Funciones con parámetros.
+
+--------------------------------------------------------------------------------------
+
+function saltarLinea(peso,altura) {
+       imc = peso/(altura*altura)
+	return imc;
+    }
+
+-------------------------------------------------------------------------------------
+prompt("Ingresa Algo")
+
+var nombre = promnt("Ingresa tu Nombre")
+var peso = prompt("Ingresa Peso")
+
+
+---------------------------------------------------------------------------------------
+
+Lo que aprendimos
+
+    Creamos un programa para calcular IMC.
+    Profundizamos en el retorno de funciones.
+
+----------------------------------------------------------------------------------
+
+	var victorias = prompt("Ingresa tus victorias");
+	var empates = prompt("Ingresa tus empates");
+	var v1 = parseInt(victorias);
+	var e1 = parseInt(empates);
+	var puntosTotales = (v1*3)+e1;
+	document.write("PUNTOS TOTALES: "+ puntosTotales);
+
+------------------------------------------------------------------------------------------
+
+	var victorias = parseInt(prompt("Ingresa tus victorias"));
+	var empates = parseInt(prompt("Ingresa tus empates"));
+	var puntosTotales = (victorias * 3) + empates;
+	document.write("PUNTOS TOTALES: " + puntosTotales);
+
+--------------------------------------------------------------------------------------
+
+¡Correcto! Como la función prompt siempre transforma todo lo que digitamos en
+el formato del texto, o sea, como un string, es una buena práctica siempre 
+convertir el valor digitado para el numero cuando nuestra intención es leer 
+un número. 
+
+Analicemos esta instrucción: 
+
+var invitados = parseInt(prompt("Número de invitados"));
+
+La función prompt retorna lo que digitamos como string y ese retorno es 
+pasado para parseInt. Y es esta función que recibe un string y la 
+convierte en un número. Ahora, como tenemos dos números vinculados, 
+no sucederá más una concatenación, y sí una suma.
+----------------------------------------------------------------------------------------
+
+	var victorias = parseInt(prompt("Ingresa tus victorias"));
+	var empates = parseInt(prompt("Ingresa tus empates"));
+	var puntosTotales = (victorias*3) + empates;
+	
+	if(puntosTotales>50){
+		document.write("MUY BIEN ESTAMOS MEJOR QUE HACE UN AÑO"+ puntosTotales);
+	}
+	
+	if(puntosTotales<50){
+		document.write("MUY MAL ESTAMOS PEOR QUE HACE UN AÑO "+ puntosTotales);
+	}
+	
+	if(puntosTotales==50){
+		document.write("ESTAMOS IGUAL QUE HACE UN AÑO "+ puntosTotales);
+	}
+-------------------------------------------------------------------------------------------------------------
+
+	var peso = parseInt(prompt("Ingresa Tu Peso Kg:"));
+	var estatura = parseFloat(prompt("Ingresa tu Estatura mts:"));		
+	var imc=peso/(estatura*estatura);
+
+	if(imc > 30){
+		document.write("OBESIDAD: "+ imc);
+	}
+	
+	if(imc < 18){
+		document.write("INSUFICIENCIA PONDERAL "+ imc);
+	}
+	
+	if(imc > 18.5 && imc < 24.9){
+		document.write(" NORMAL "+ imc);
+	}
+	if(imc > 25 && imc < 29.9){
+		document.write(" SOBRE PESO "+ imc);
+	}
+-----------------------------------------------------------------------------------------------------------
+
+	Math.random()
+	Math.random() * 3
+	Math.round(Math.random() * 5 )
+
+------------------------------------------------------------------------------------
+
+¡Correcto! La condición if necesita recibir el resultado de una operación
+ lógica dentro de los paréntesis.
+
+	if(contrasenha == "micontrasenha123") 
+
+Además, es dentro del bloque que indicamos cuáles instrucciones se 
+ejecutarán si la operación lógica fuera true:
+
+	if(contrasenha == "micontrasenha123") {
+ 	   alert("Acceso liberado!");    
+	}
+
+Observa que tenemos dos llaves que comienzan y finalizan el bloque if. 
+La instrucción else viene justo después del bloque if:
+
+	(contrasenha == "micontrasenha123") {
+    	alert("Acceso liberado!");    
+	} else
+
+Así como la instrucción if, la instrucción else también tiene su bloque con
+ las instrucciones que deseamos ejecutar si la condición if recibe false:
+
+	if(contrasenha == "micontrasenha123") {
+	    alert("Acceso liberado!");
+	} else {
+	    alert("Acceso negado!");
+	}
+
+------------------------------------------------------------------------------------------------
+
+	Lo que aprendimos
+
+	    Convertir string en número usando parseInt.
+	    Trabajar con condiciones if y else.
+	    Usar fórmulas matemáticas como Math.random y Math.round.
+
+**************************************************************************************************
+
+	var anioPrimerMundial = 1930;
+
+	while (anioPrimerMundial < currentYear){
+	
+	alert("EN Este Año Hubo Mundial De La FIFA " + anioPrimerMundial);
+	anioPrimerMundial = anioPrimerMundial + 4;
+	
+	}
+
+	alert("END");
+-------------------------------------------------------------------------------------------
+	var anioPrimerMundial = 1930;
+	var anioUsuario = parseInt(prompt("Ingresa Hasta Que Año Quieres Verificar"))
+	
+	while (anioPrimerMundial < anioUsuario){
+	
+	alert("EN Este Año Hubo Mundial De La FIFA " + anioPrimerMundial);
+	anioPrimerMundial = anioPrimerMundial + 4;
+	
+	}
+
+--------------------------------------------------------------------------------------------------
+
+¡Correcto! Recuerda que el while repetirá TODAS las instrucciones que 
+estén dentro de su bloque { } cuando la condición pasada sea true. 
+
+Observa que el while recibe en sus paréntesis () 
+
+	la expresión contador <= 10.
+
+	Cuando el navegador interpreta la línea del while preguntará: 
+	¿El valor de la variable contador es menor que o igual a 10?
+
+	 Como variable contador recibe el valor 1 en su inicialización el
+	 resultado de la expresión contador <= 10 será true. Siendo así, 
+	el while estará autorizado para ejecutar la instrucción dentro de su 
+	bloque, en ese caso, la instrucción imprimir("¡Se acabó, vos erraste!");
+	y la instrucción contador = contador + 1.
+
+	¿Tiene sentido que él ejecute imprimir("¡Se acabó, vos erraste!")? 
+	Por supuesto, pero ¿recuerdas la razón por
+	 la que hacemos contador = contador + 1? Ten en cuenta que esta 
+	variable existe solo para un propósito: es la que romperá la sección de 
+	repetición while. Con cada repetición de la instrucción imprimir, 
+	necesitamos aumentarlo para saber que ya lo hemos ejecutado, una, dos, 
+	tres veces, etc.
+
+	Si no tenemos la instrucción contador = contador + 1, la condición pasada
+	 al while dará siempre true y caeremos en una repetición infinita, 
+	el famoso loop infinito y muy probable que nuestro navegador se cuelgue.
+
+----------------------------------------------------------------------------------------------------------
+
+	var multiplica = parseInt(prompt("Ingresa El Numero a Multiplicar"));
+	var limiteUser = parseInt(prompt("Ingresa El Limite"));
+
+	for(var i=1; i <= limiteUser; i++){
+	
+	var resultado = i * multiplica;
+	document.write("Resultado:\n" + resultado + "\n");	
+
+	}
+-------------------------------------------------------------------------------------------------------------
+
+¡Correcto! La declaración for se divide en tres partes que están separadas por un
+ punto y coma. La primera se usa para declarar la variable que usaremos como 
+ contador, la segunda para la condición de repetición y la última para el 
+ incremento de la variable contador.
+
+	De hecho, cuando queremos incrementar uno por uno, podemos usar el incremento 
+
+	posterior:
+
+	for( var contador = 1; contador <= 10; contador++ ) {
+  	  alert("Contador actual: " + contador);
+	}
+
+	Ten en cuenta que usamos contador++ en lugar de contador=contador + 1. 
+	La primera forma es mucho más ágil.
+------------------------------------------------------------------------------------------------------------------
+
+	var intentos = 3; 
+	var numeroMachine = Math.round(Math.random()*10);
+	
+	while( intentos > 0) {
+    
+	var numUsuario = parseInt(prompt("Ingresa El Numero que Crees Que Tengo 1-10 :"));
+	
+	if(numUsuario == numeroMachine){
+
+		document.write("ACERTASTE:\n" + numeroMachine + "\n");	
+		break;
+	}
+		else {
+		alert("Fallaste:\n" + numeroMachine + "\n");	
+    		}
+	intentos--;
+	}
+---------------------------------------------------------------------------------------------------------------------
+
+	Lo que aprendimos:
+
+   	 Repetir tareas y actividades con iteraciones while.
+  	 Repetir tareas y actividades con iteraciones for.
+    	 Interrumpir iteraciones con break.
+   	 Realizar iteraciones anidadas, un loop dentro de otro.
+
+-------------------------------------------------------------------------------------------------------------------------
+	INPUT
+	
+	<input/>
+	<button>HERE</button>
+
+----------------------------------------------------------------------------------------
+
+<meta charset="UTF-8">
+
+	<input/>
+	<button>HERE</button>
+
+	<script>
+
+
+	</script>
+
+----------------------------------------------------------------------------------------------
+
+¡Correcto! Lo aprendiste a través del document.write que escribimos en la pantalla,
+ pero el document tiene también otras funcionalidades. 
+
+Es a través de document.querySelector que podemos ir hasta el mundo HTML y llevar 
+el elemento al mundo JavaScript para que podamos manipularlo. Pero ten cuidado, 
+el correcto es querySelector con una S mayúscula. Si escribes con una s minúscula, 
+cometerás un error de sintaxis. Continuando... document.querySelector recibe un
+parámetro del nombre de las etiquetas que queremos buscar del mundo HTML. 
+
+Es más poderoso de lo que piensas y acepta recibir otros tipos de parámetros, 
+pero para nuestra capacitación, entender que si pasamos el nombre de una etiqueta 
+HTML nos devolverá la etiqueta en el mundo JavaScript es suficiente. 
+
+Hay otras cuestiones involucradas en este proceso, pero no te preocupes. 
+Las conocerás si deseas profundizar tus estudios en el lenguaje JavaScript.
+
+******************************************************************************************************************************************************
+sublime, html
+
+
+<meta charset="UTF-8">
+
+	<input/>
+	<button>CHECK</button>
+
+	<script>
+	
+	var valorDin = Math.round(Math.random()*10);; 
+	var entrada = document.querySelector("input");
+		entrada.value = "";
+		entrada.focus();
+
+	function verifica(){
+		if(parseInt(entrada.value) == valorDin){
+		alert("ACERTASTE!!")
+		}
+		else{
+			alert("Fallaste!! res:"+valorDin)
+		}
+
+		entrada.value = "";
+		entrada.focus();
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = verifica;
+	
+	</script>
+
+**********************************************************************************************************************
+
+¡Correcto! Cuando se llama a la función mostrarTexto, 
+pasará como parámetro de la función alert el valor input.value. 
+
+No podemos simplemente pasar input, porque el input corresponde a la etiqueta 
+y queremos que su valor provenga de esa etiqueta. Por eso, pasamos input.value.
+
+************************************************************************************************************************
+
+Lo que aprendimos
+
+
+    A mejorar la interacción del usuario con uso de botones.
+    A mejorar la interacción del usuario con uso de cajas de texto.
+    A mejorar la usabilidad de nuestro programa con focus.
+
+******************************************************************************************************************
+	Arrays
+
+	Declaracion:
+			var secretos[3,5,8,9];
+	Para acceder
+	a cierto valor:
+			secretos[0]
+			3
+	LONGITUD DEL ARREGLO
+	
+			secretos.length
+			4
+
+
+********************************************************************************************************************
+
+¡Correcto! Cada array se declara entre corchetes, el famoso [ ]. 
+Sin embargo, si tenemos una declaración como esta var cosas = [ ],
+ tenemos un array, es decir, una lista vacía sin ningún elemento. 
+
+Podemos, al declarar un array, agregar elementos. 
+Estos elementos pueden ser de cualquier tipo de dato conocido: 
+
+		var cosas = ["Gisele", 12, true];
+
+El primer elemento de nuestro array es un string, el segundo un número y el 
+último un booleano.
+
+************************************************************************************************************************
+var numbers = [2,3,5,10];
+	var entrada = document.querySelector("input");
+
+		entrada.focus();
+		entrada.value = "";
+
+	function verifica(){
+		var flag = true;
+
+		for(var i=0; i < 4 ; i++){
+
+			if(parseInt(entrada.value)== numbers[i]){
+				alert("Acertaste")
+				flag=flase;
+				break;
+
+				}
+			}
+			
+			if(flag==true){
+				alert("Fallaste")
+			}	
+		
+		entrada.value="";
+		entrada.focus;
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = verifica;
+
+************************************************************************************************************************
+
+	Lo que aprendimos
+
+	    Concepto y dinámica de los arrays.
+	    Usar iteraciones para cargar arrays.
+	    Descubrir el tamaño de los arrays.
+-------------------------------------------------------------------------------------------------------------------------
+
+	¡Correcto! Todo array tiene una función push que le permite "insertar" 
+	elementos en la lista.
+
+		var frutas = ["piña", "banana", "melón"];
+		frutas.push("aguacate");
+	
+		frutas
+		(4) ['piña', 'banana', 'melón', 'aguacate']
+
+**************************************************************************************************************************
+<meta charset="UTF-8">
+
+	<input/>
+	<button>INGRESA EL NUMERO EN EL ARREGLO</button>
+
+	<script>
+
+	function generaNumero(){
+
+		return Math.round(Math.random()*10);
+
+	}
+	
+	function revisaVector(cantidad){
+		
+		var count = 1;
+		var numbers = [];
+		
+		while(count <= cantidad ){
+		
+		var flag = true;
+		var noDin = generaNumero();
+		console.log(noDin)
+
+		if(noDin != 0 ){
+
+			for(var i=0; i < numbers.length; i++){
+
+			if(noDin == numbers[i]){
+
+				flag=flase;
+				break;
+
+				}
+			}
+
+
+			if(flag==true){
+				numbers.push(noDin);
+				count++;
+				}	
+
+			}
+		}
+
+		return numbers
+		
+	}
+
+	var numbers = revisaVector(4)
+	console.log(numbers);
+	
+	var input = document.querySelector("input");
+	input.focus();
+
+
+
+	</script>
+
+****************************************************************************************************************************
+
+	Lo que aprendimos
+
+
+	    Ingresar valores manualmente en los arrays con la función push.
+	    Resolver problemas más complejos usando varios conceptos de programación
+	    juntos en un mismo programa (Loops, arrays, condiciones, funciones y 
+	    fórmulas matemáticas).
+
+************************************************************************************************************************
+
+	* CONOCER CANVAS
+	* ANIMACIONES
+	* ACERTA AL BLANCO
+
+	<canvas width="600" height="400"> </canvas>
+
+		<script>
+
+			var screan = document.querySelector("canvas");
+			var brush =  screan.getContext("2d");
+
+			brush.fillStyle = "lightgrey";
+			brush.fillRect(0,0,600,400);
+
+			brush.fillStyle = "green";
+			brush.fillRect(0,0,200,400);
+			
+			
+			brush.fillStyle = "purple";
+			brush.beginPath();
+			brush.moveTo(300,200);
+			brush.lineTo(200,400);
+			brush.lineTo(400,400);
+			brush.fill();
+	
+			brush.fillStyle = "pink";
+			brush.beginPath();
+			brush.arc(300,200,50,0,2*3.14);
+			brush.fill();
+
+
+		</script>
+
+********************************************************************************************************************************
+
+	Lo que aprendimos
+
+	    A usar el Canvas como una pizarra donde realizamos nuestros diseños.
+	    A diseñar figuras geométricas como rectángulos y circunferencias.
+	    A personalizar algunas propiedades de nuestras figuras como el color.
+
+*******************************************************************************************************************************
+<canvas width="600" height="400"> </canvas>
+
+
+	<script>
+
+
+		var screan = document.querySelector("canvas");
+		var brush =  screan.getContext("2d");
+
+		brush.fillStyle = "green";
+		brush.fillRect(0,0,50,50);
+		brush.strokeStyle ="orange";
+		brush.strokeRect(0,0,50,50);
+
+		brush.fillStyle = "pink";
+		brush.fillRect(50,50,50,50);
+		brush.strokeStyle ="orange";
+		brush.strokeRect(50,50,50,50);
+
+		brush.fillStyle = "blue";
+		brush.fillRect(150,50,50,50);
+		brush.strokeStyle ="orange";
+		brush.strokeRect(150,50,50,50);
+
+
+		brush.fillStyle = "yellow";
+		brush.fillRect(100,0,50,50);
+		brush.strokeStyle ="orange";
+		brush.strokeRect(100,0,50,50);
+
+	
+	</script>
+
+***********************************************************************************************************************
+
+<canvas width="600" height="400"> </canvas>
+
+	<script>
+		
+		function drawAsquare(x,y,color){
+
+		var screan = document.querySelector("canvas");
+		var brush =  screan.getContext("2d");
+
+
+		brush.fillStyle = color;
+		brush.fillRect(x,y,50,50);
+		brush.strokeStyle ="orange";
+		brush.strokeRect(x,y,50,50);
+
+
+		}
+
+		drawAsquare(0,0,"red");
+		drawAsquare(0,50,"pink");
+		drawAsquare(0,100,"blue");
+
+
+	</script>
+
+***************************************************************************************************************
+	LOOPs
+
+		WHILE:
+
+			var x = 0;
+
+			while(x < 600){
+
+				drawAsquare(x,0,"red");
+				x=x+50;
+			}
+		
+--------------------------------------------------------------------------------------------------------------------
+
+		FOR:
+
+			
+		function drawAsquare(x,y,color){
+
+		var screan = document.querySelector("canvas");
+		var brush =  screan.getContext("2d");
+
+
+		brush.fillStyle = color;
+		brush.fillRect(x,y,50,50);
+		brush.strokeStyle ="orange";
+		brush.strokeRect(x,y,50,50);
+
+
+		}
+
+		for(var x=0; x<600; x = x+50 ){
+
+			drawAsquare(x,0,"pink");
+	
+		}
+		
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+	Lo que aprendimos
+	
+
+    A usar funciones para encapsular la creación de figuras.
+    A utilizar ciclos Loop para repetir actividades cuando creamos nuestras figuras.
+
+
+***********************************************************************************************************************************
+
+<canvas width="600" height="400"> </canvas>
+
+	<script>
+		
+		
+		var screan = document.querySelector("canvas");
+		var brush =  screan.getContext("2d");
+
+
+		brush.fillStyle = "pink";
+		brush.fillRect(0,0,600,400);
+
+		function showAnAlert(eventualidad){
+
+			console.log(eventualidad);
+			alert("Habeis Hecho Un Click :)");
+
+
+		}
+
+		screan.onclick = showAnAlert;	
+
+
+	</script>
+
+------------------------------------------------------------------------------------------------------------------
+
+
+¡Correcto! Para asociar la función con el evento onclick, le pasamos la función sin 
+los paréntesis y sin ningún parámetro. Lo que nuestro navegador está haciendo entre 
+bastidores es cargar la función en el compilador y cada vez que el usuario 
+hace clic en la pantalla, la función es ejecutada y recibe como parámetro 
+algunas propiedades y características del evento que luego aprovechamos para 
+extraer las coordenadas.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+	DRAW CIRCLES ON CANVAS
+
+	<canvas width="600" height="400"> </canvas>
+
+	<script>
+		
+		
+		var screan = document.querySelector("canvas");
+		var brush =  screan.getContext("2d");
+
+
+		brush.fillStyle = "pink";
+		brush.fillRect(0,0,600,400);
+
+		
+
+		function drawAcircle(eventualidad){
+
+			var x = eventualidad.pageX - screan.offsetLeft;
+			var y = eventualidad.pageY - screan.offsetTop;
+
+			brush.fillStyle = "gray";
+			brush.beginPath();
+			brush.arc(x,y,10,0,2*3.14);
+			brush.fill();
+			console.log(x + "," + y);
+		
+		}
+
+		screan.onclick = drawAcircle;	
+
+
+	</script>
+
+*******************************************************************************************************************
+
+	Lo que aprendimos
+
+	    A interactuar con el usuario a través de los eventos.
+	    A asociar funciones con los eventos y a capturar las propiedades 
+	    del evento para pasarlas como parámetro.
+
+**********************************************************************************************************************
+
+	MOVING A CIRCLE
+
+
+	<canvas width="600" height="400"> </canvas>
+
+	<script>
+		
+		
+		var screan = document.querySelector("canvas");
+		var brush =  screan.getContext("2d");
+
+
+		brush.fillStyle = "grey";
+		brush.fillRect(0,0,600,400);
+
+		
+
+		function drawAcircle(x,y,radio){
+
+			brush.fillStyle = "pink";
+			brush.beginPath();
+			brush.arc(x,y,radio,0,2*Math.PI);
+			brush.fill();
+		
+		}
+
+		function clearScrean(){
+
+		brush.clearRect(0,0,600,400);
+		
+		}
+
+		var x =0 
+
+		function updateScrean(){
+
+			clearScrean();
+			drawAcircle(x,20,10);
+			x++;
+		
+		}
+
+		setInterval(updateScrean,25);	
+
+
+	</script>
+
+*********************************************************************************************************************
+
+	Lo que aprendimos
+
+
+	    A realizar animaciones simples.
+	    A limpiar la pantalla usando clearRect().
+	    A llamar a funciones a cada cierto intervalo de tiempo con setInterval().
+
+
+*****************************************************************************************************************************
+
+	MOVING AN OBJECTIVE AROUND THE CANVAS CAN YOU ACCERT IT ?
+
+
+<canvas width="600" height="400"> </canvas>
+
+	<script>
+		
+		
+		var screan = document.querySelector("canvas");
+		var brush =  screan.getContext("2d");
+		var radio = 10;
+		var x = 0;
+		var xRandom;
+		var yRandom;
+
+		brush.fillStyle = "grey";
+		brush.fillRect(0,0,600,400);
+
+		function drawAcircle(x,y,radio,color){
+
+			brush.fillStyle = color;
+			brush.beginPath();
+			brush.arc(x,y,radio,0,2*Math.PI);
+			brush.fill();
+		
+		}
+
+
+		function drawObjective(x,y){
+			drawAcircle(x,y,radio + 20,"red");
+			drawAcircle(x,y,radio + 10,"white");
+			drawAcircle(x,y,radio,"red");
+		
+		}
+
+		function positionRandom(max){
+
+		return Math.floor(Math.random() * max);
+		
+		}
+
+		function clearScrean(){
+
+		brush.clearRect(0,0,600,400);
+		
+		}
+
+		function updateScrean(){
+
+			clearScrean();
+			xRandom = positionRandom(600);
+			yRandom = positionRandom(400);
+		
+			drawObjective(xRandom,yRandom);	
+		}
+
+		function shotEvent(event){
+
+			var x = event.pageX - screan.offsetLeft;
+			var y = event.pageY - screan.offsetTop	 ;
+
+			if((x < xRandom + radio) &&
+			   (x > xRandom - radio) &&
+			   (y < yRandom + radio) &&
+			   (y > yRandom - radio)){
+
+				alert(" ACERTASTE !!!!! ");
+			}
+		
+		}	
+
+		screan.onclick = shotEvent;	
+		setInterval(updateScrean,1000);
+
+
+	</script>
+
+
+*******************************************************************************************************************************
+
+
+	Solo la opción C es falsa.
+
+¡Correcto! Las opciones A y B son verdaderas, y la opción C es falsa, 
+pues si bien tanto Math.round como Math.floor las usamos para redondear valores, 
+
+Math.round la usamos cuando queremos retornar el valor de un número redondeado 
+al entero más cercano, y 
+
+Math.floor cuando queremos redondear un número al máximo entero menor. 
+
+Por ejemplo si quisiéramos redondear el número 27.83 con Math.round(27.87) 
+el resultado sería 28 y con Math.floor(27.87) sería 27.
+
+***************************************************************************************************************************
+	
+	DRAWING WITH THE MOUSE ON
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var puedoDibujar = false;
+
+    function dibujarCirculo(evento) {
+
+        if(puedoDibujar) {
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+            pincel.fillStyle = 'blue';
+            pincel.beginPath();
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+
+    }
+
+    pantalla.onmousemove = dibujarCirculo;
+
+    function habilitarDibujar() {
+
+        puedoDibujar = true;
+    }
+
+    function deshabilitarDibujar() {
+
+        puedoDibujar = false;
+    }
+
+    pantalla.onmousedown = habilitarDibujar;
+
+    pantalla.onmouseup = deshabilitarDibujar;
+
+</script>
+
+***************************************************************************************************************************************
+
+	 Lo que aprendimos
+
+    A crear un juego interactivo.
+    A redondear números con una nueva función Math.floor().
+    A abstraer un problema para proponer una solución lógica a 
+	través de un algoritmo.
+    A usar varios conceptos de lógica en un solo programa, como funciones,
+	 condiciones, capturar eventos, ciclos Loop, etc.
+
+****************************************************************************************************************************************
+
+	<h1>El TaQuesHy</h1>
+	
+	<p>Somos una <strong>cadena de comida rapida</strong> dedicada a la 
+	elaboracion y entrega de alimentos, con la mas alta calidad posible
+	 <strong>desde 1948</strong>.</p>
+
+	<p>Estamos ubicados en Av Canal de San Juan No.1569, colonia La Hermosisima,
+ 	CP.05478, y en cualquiera de nuestras <strong>165 sucursales al rededor del 
+	pais</strong>.<p/>
+
+	<p><em><strong>Nuestra mision es </strong></em>satisfacer las necesidades 
+	nutrimentales de nuestros clientes con <strong>los mas altos estandares de
+	higiene en nuestros establecimientos y las mejores materias primas y su 
+	elaboracion.</p>
+
+	<p><em>Nuestra vision</em> es abastecer de forma contstantes las 
+	necesidades de nuestros clientes <strong>brindadno 
+	una atencion y servicio unicos en el mercado</strong>.</p>
+
+************************************************************************************************************************************************************
+
+	Lo que aprendimos en esta aula
+
+
+	    Una introducción al HTML y sus etiquetas.
+
+	    Cómo definir el título y los párrafos de un texto, utilizando las 
+		etiquetas <h1> y <p>, respectivamente.
+	    Como dar destaque para algunas informaciones de texto, dejándolas en 
+		negrito, utilizando la etiqueta <strong>.
+	    Como dar énfasis para algunas informaciones de texto, dejándolas en 
+		itálico, utilizando la etiqueta <em>.
+
+*******************************************************************************************************************************************************
+
+	¡Alternativa correcta! 
+
+	Es necesario informar al navegador que estamos usando un diccionario 
+	específico que contiene caracteres especiales propios de varios idiomas 
+	populares en el mundo, siendo nuestra lengua española uno de ellos, 
+	ya que contiene acentos y la letra ñ por ejemplo.
+
+	¡Alternativa correcta! Como buena práctica de programación se acostumbra 
+	estructurar el HTML colocando las informaciones que queremos pasar para el 
+	navegador en el head y las etiquetas de contenido en el body
+
+	Lo que aprendimos en esta aula
+
+    * A definir la estructura básica del HTML.
+    * Con la etiqueta DOCTYPE, definimos cuál versión de HTML estamos utilizando.
+    * La etiqueta <html>, marca el contenido a ser renderizado en el navegador. 
+    * Dentro de esta etiqueta, podemos definir el lenguaje de la página, a través de 
+      la propiedad lang.
+    * Cómo pasar las informaciones del encoding de nuestra página para el navegador, 
+      a través de la etiqueta <meta> y de la propiedad charset.
+    * Cómo definir el título de una página, a través de la etiqueta <title>.
+    * Cómo separar las informaciones que están siendo pasadas para el navegador, 
+      utilizando la etiqueta <head>.
+    * Cómo separar el contenido de la página, utilizando la etiqueta <body>.
+
+
+***************************************************************************************************************************************************************************************	
+
+	¡Alternativa correcta! Su nombre lo dice Cascade Sheet Style 
+	(Hojas de estilo en cascada), por lo tanto, a medida que la cascada 
+	va descendiendo, todo aquello que hacemos en el elemento padre, refleja 
+	en el elemento hijo.
+
+***************************************************************************************************************************************************************************************
+
+	Hexadecimal, RGB y con los nombres de los colores
+
+	¡Alternativa correcta! Podemos representar el color rojo con el nombre red, 
+	el hexadecimal #FF0000 y el RGB rgb(255,0,0).
+
+	Lo que aprendimos en esta aula
+
+   	 A configurar la presentación de los textos: alineamiento (text-align), tamaño de la fuente (font-size), 
+		el color del fondo (background) y el color del texto (color).
+    	CSS inline: adicionar estilos CSS en la misma línea donde tenemos nuestra etiqueta HTML.
+    	La etiqueta <style>: dentro de esta etiqueta podemos colocar marcaciones de CSS referentes a 
+		los elementos que tenemos en nuestro HTML.
+	La presentación del CSS como un archivo externo.
+    	Cómo funciona el estilo en cascada del CSS.
+    	Cómo importar un archivo externo de CSS dentro de nuestra página HTML.
+    	Cómo representar colores en el CSS: 1) a través del nombre del color en inglés, 2) 
+		a través de su representación hexadecimal y 3) a través del RGB.
+
+*********************************************************************************************************************************************************
+
+	Lo que aprendimos en esta aula
+
+	    Cómo reestructurar nuestro código, removiendo los estilos CSS inline y 
+		colocándolos en el archivo CSS externo.
+	    Cómo crear un identificador para marcar específicamente un elemento: 
+			cómo realizar esa referencia a ese identificador en el CSS.	
+	    Cómo adicionar una imagen en nuestra página.
+	    Cómo ajustar la altura del elemento, a través de la propiedad height.
+	    Cómo ajustar la anchura del elemento, a través de la propiedad width.
+	    Cómo ajustar el margen interno del elemento, a través de la propiedad 
+		padding.
+	    Cómo ajustar el margen extern del elemento, a través de la propiedad 
+		margin.
+	    Cómo se conforma normalmente un equipo de front-end hoy en día.
+
+****************************************************************************************************************************************
+
+	Lo que aprendimos en esta aula
+
+    Conocimos las listas (ordenadas y no ordenadas), trabajamos con listas no ordenadas.
+    Vimos que para cada ítem de la lista necesitamos usar la etiqueta <li>.
+    El concepto de las clases en el CSS, estas sirven para marcar ítems, solo que podemos replicar los estilos en varios elementos.
+    Cómo referenciar una clase en el CSS.
+    Divisores de contenido, utilizando la etiqueta <div>.
+    Los comportamientos inline y block.
+	
+	------------------------------------------------------------------HTML
+
+	<!DOCTYPE html>
+	<html lang = "es">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>El TaQuesHy</title>
+		<link rel="stylesheet" href="style.css"> 
+	</head>
+	
+	<body>
+		<header>
+
+		<h1 class="tituloMain">El TaQuesHy</h1>
+
+	   </header>
+
+		<img src="pictures/taco2.jpg" class="imgmain"> 
+
+		<div class="principal">
+
+			<h2 class="tituloAlCentro">El TaQuesHy</h2>
+			<p>Somos una <strong>cadena de comida rapida</strong> dedicada a la elaboracion y entrega de alimentos, con la 	mas alta calidad posible <strong>desde 1948</strong>.</p>
+
+			<p>Estamos ubicados en Av Canal de San Juan No.1569, colonia La Hermosisima, CP.05478, y en cualquiera de nuestras <strong>165 sucursales al rededor del pais</strong>.<p/>
+
+			<p id="mision"><em><strong>Nuestra mision es </strong></em>satisfacer las necesidades nutrimentales de nuestros clientes con <strong>los mas altos estandares de higiene en nuestros establecimientos y las mejores materias primas y su elaboracion.</p>
+
+			<p><em>Nuestra vision</em> es abastecer de forma contstantes las necesidades de nuestros clientes <strong>brindadno 	una atencion y servicio unicos en el mercado</strong>.</p>
+
+		</div>
+		
+		<div class ="Diferenciales">
+
+			<h3 class="tituloAlCentro">Diferenciales</h3>
+
+			<ul>
+					<li class="items">Tiempos de Espera REDUCIDOS</li>
+					<li class="items">Satisfaccion en la entrega de nuestros productos </li>
+					<li class="items">Raciones Generosas</li>
+			</ul>
+			<img src="pictures/serv.jpg" class="imgserv">
+
+		</div>
+	</body>
+	</html>
+
+
+	------------------------------------------------------------------CSS
+
+	
+		.principal{
+
+			background: #CCCCCC;
+			padding: 20px;
+		}
+
+	p{
+		text-align: center;
+		
+	}
+
+	body {
+			background: #87ceeb;
+		}
+
+	em strong{
+			color: red;
+		}
+	
+	ul{
+		display: inline-block;
+		vertical-align: top;
+		width: 20%;
+		margin-right: 15%;
+		}
+
+	#mision{
+		font-size:28px;
+	}
+
+	.items{
+		font-style: italic;	
+	}
+
+	.Diferenciales{
+		background:  #FF33B8;
+		padding: 30px;
+	}
+
+	.imgmain{
+
+		width: 100%;
+	}
+	.imgserv{
+
+		width: 20%;
+	}
+	.tituloAlCentro{
+			text-align: center;
+		}
+	.tituloMain{
+	
+			padding-left: 30px;
+		}
+
+************************************************************************************************************************
+
+	Lo que aprendimos en esta aula
+
+    El concepto de encabezado de página y como crearlo.
+    Que no es recomendado crear estilos usando etiquetas, lo ideal es usar selectores de 
+    clases para todo.
+
+	
+
+	Lo que aprendimos en esta aula:
+
+    Una revisión del contenido aprendido en el entrenamiento anterior.
+    Una revisión de la base de una página HTML.
+    Lista HTML no ordenada. 
+*******************************************************************************************************************************
+
+	Lo que aprendimos en esta aula:
+
+    	A crear links para otras páginas, sean estas de nuestro proyecto o páginas externas.
+    	Un refuerzo a los estilos inline y block.
+    	Cómo transformar el texto para tener todas las letras mayúsculas.
+    	Cómo dejar el texto en Negrita con CSS.
+    	Cómo quitar la decoración del texto.
+
+**********************************************************************************************************************************
+
+	Lo que aprendimos en esta aula:
+
+	    Cómo quitar los estilos que el navegador crea automáticamente.
+	    Cómo funcionan los posicionamientos static, relative y absolute de los elementos.
+	    Cómo posicionar el encabezado de nuestra página.
+
+********************************************************************************************************************************
+
+	Lo que aprendimos
+
+	    La etiqueta <main>, para el contenido principal de nuestra página.
+	    A crear listas complejas, con títulos, imágenes y párrafos.
+	    A utilizar el inline-block
+	    A practicar y estilizar el contenido principal de nuestra página. 
+
+********************************************************************************************************************************
+	
+
+	Lo que aprendimos en esta aula:
+
+    	A través del CSS, aplicar bordes en los elementos.
+    	Los diferentes tipos de bordes.
+   	A dejar el borde redondeado
+
+*******************************************************************************************************************************
+
+	Lo que aprendimos en esta aula:
+
+	    Algunas pseudo-clases CSS 
+		hover, cuando el usuario pasa el cursor sobre el elemento.
+        	active, cuando un elemento está siendo activado por el usuario. 
+
+    	   A cambiar el color del texto y/o del borde de un elemento, cuando el usuario pase el cursor sobre el mismo.
+           A cambiar el color del borde de un elemento, cuando el mismo está siendo activado por el usuario. 
+
+********************************************************************************************************************************
+
+	Lo que aprendimos en esta aula:
+
+    La etiqueta <footer>, para el pie de página de nuestra página.
+    Que con CSS, podemos poner una imagen de fondo en un elemento. 
+    Cuando ponemos una imagen de fondo en un elemento, el CSS, por defecto copia y pega la 
+	imagen varias veces hasta ocupar el espacio del elemento.
+    La tabla Unicode. 
+
+*******************************************************************************************************************************
+
+	Lo que aprendimos en esta aula:
+
+	    Una revisión del contenido aprendido en el entrenamiento anterior.
+	
+	    Una introducción al proyecto del entrenamiento.
+	
+	    La creación de la página de contacto.
+	
+	    Un poco sobre los formularios.
+
+*****************************************************************************************************************************
+
+Lo que aprendimos en esta aula:
+
+    A crear un formulario HTML.
+
+    La etiqueta que lo representa es <form>.
+
+    La etiqueta <input>, para la entrada de datos del usuario.
+
+    A crear una etiqueta para el input con la etiqueta <label>.
+
+    A conectar un input con su label.
+
+    Colocamos un id al input y asociamos ese id al atributo for del label
+
+    Algunos tipos de input, como text y submit.
+
+    Qué label e input por padrón posee el display inline.
+
+    A estilizar nuestro formulario
+
+********************************************************************************************************************************
+
+
+	Lo que aprendimos en esta aula:
+
+	    El textarea, para entradas de texto de más de una fila.
+
+	    El input de tipo radio.
+
+	    Cómo agrupar varios input de tipo radio, impidiendo que más de un input sea seleccionado.
+
+	    El input del tipo checkbox.
+
+	    Que podemos crear un input dentro de un label, asociándolos.
+
+	    Más estilos para nuestra página.
+
+	    Cómo funciona la jerarquía en CSS .
+
+	    El select, que es selector, un campo de selección de un ítem, y el option, 
+	    que representa cada opción del selector.
+
+**********************************************************************************************************************************
+
+	Lo que aprendimos en esta aula:
+
+    Algunos tipos de inputs para el celular: email, tel, number, password, date, datetime, month y search.
+
+    Cómo configurar campos obligatorios, o sea, exigir al usuario para que algunos campos sean completados, 
+    a través del atributo required.
+
+    Cómo mostrar una sugerencia para completar los campos, a través del atributo placeholder.
+
+    Cómo dejar una opción marcada por padrón en nuestros input radio y checkbox a través del atributo checked.
+
+    Cómo estructurar mejor nuestro código con fieldset y legend.
+
+    Cómo agregar una alternativa a la imagen, describiéndola, con el atributo alt.
+
+***********************************************************************************************************************************
+
+	Lo que aprendimos en esta aula:
+
+	    Cómo colocar estilos al botón de envío de formulario.
+
+	    A realizar transiciones en nuestros elementos, con la propiedad CSS transition.
+
+	    A modificar el estilo del puntero del mouse, al pasar sobre un determinado elemento, 
+            a través de la propiedad CSS cursor.
+
+	    A realizar transformaciones en nuestros elementos, como aumentar proporcionalmente 
+	    la escala de determinado elemento o rotarlo, a través de la propiedad CSS transform.
+
+***********************************************************************************************************************************
+
+
+	Lo que aprendimos en esta aula:
+
+	    A crear una tabla HTML.
+	        La etiqueta table, representa la tabla.
+	        La etiqueta tr, representa la fila de la tabla.
+       	 	La etiqueta td, representa la celda de la tabla.
+        	La etiqueta thead, representa el encabezado de la tabla.
+        	La etiqueta tbody, representa el cuerpo de la tabla.
+        	La etiqueta th, representa la celda del encabezado de la tabla.
+        	La etiqueta tfoot, representa el pie de página de la tabla. 
+    		A colocar los estilos respectivos a nuestra tabla.
+
+***********************************************************************************************************************************
+
+    Lo que aprendimos en esta clase:
+
+    A ajustar la página principal para utilizar los mismos padrones de la página de productos
+    Medidas proporcionales con CSS
+    Cómo funciona la propiedad float y cómo la podemos usar para que nuestros elementos floten sobre el 
+    lado que se indica.
+    Como limpiar el float con la propiedad clear del CSS
+
+***********************************************************************************************************************************
+
+
+	Lo que aprendimos en esta aula:
+
+	    A utilizar fuentes externas en nuestras páginas
+	    Cómo incorporar un mapa en nuestra página
+	    Cómo incorporar un video en nuestra página
+
+***********************************************************************************************************************************
+
+	Lo que aprendimos en esta aula:
+
+    A mejorar la semántica de la página principal, con nuevas divisiones, clases, etc.
+    Nuevas pseudo-clases
+    Cómo aplicar un background degradado en la página
+    Pseudo-elementos.
+
+***********************************************************************************************************************************
+
+
+	Lo que aprendimos en esta aula:
+
+	    Cómo manipular la opacidad de los elementos, con la propiedad CSS opacity
+	    Cómo manipular la opacidad de los colores
+	    Cómo agregar un sombreado alrededor de los elementos, con la propiedad CSS box-shadow
+	    Cómo agregar un sombreado en textos, con la propiedad CSS text-shadow
+
+***********************************************************************************************************************************
+
+
+	Lo que aprendimos en esta aula:
+
+	    Design responsivo: Cómo ajustar el estilo de nuestra página según el tamaño de pantalla del dispositivo 
+	    que acceda:
+	    		Meta etiqueta de Viewport
+	    		Media Queries
+
+
+***********************************************************************************************************************************
+	GIT and GITHub
+
+	En esta aula aprendimos:
+
+    Qué son (y para qué sirven) los sistemas de control de versiones y cómo pueden ayudar a nuestro flujo de 
+    desarrollo:
+
+        Nos ayudan a mantener un historial de cambios;
+        Nos ayudan a tener control sobre cada cambio en el código;
+        Nos ayudan a que un cambio de una persona no influya en el cambio realizado por otra;
+        Etc.
+
+    Qué es Git y cómo instalarlo
+    Que con el comando git init pudimos crear un repositorio Git;
+    Cómo analizar el estado de nuestro repositorio usando el comando git status.
+
+		$ git --version
+		$ ls
+		$ git init
+		$ git status
+
+***********************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***********************************************************************************************************************************
+
+	cyberark
+	LDAP
+	eglcatalog
+
+
+
+
+
+
+
+
+
+
+
+

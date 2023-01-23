@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+
+	<input/>
+	<button>INGRESA EL NUMERO EN EL ARREGLO</button>
+
+	<script>
+
+	function generaNumero(){
+
+		return Math.round(Math.random()*10);
+
+	}
+	
+	function revisaVector(cantidad){
+		
+		var count = 1;
+		var numbers = [];
+		
+		while(count <= cantidad ){
+		
+		var flag = true;
+		var noDin = generaNumero();
+		console.log(noDin)
+
+		if(noDin != 0 ){
+
+			for(var i=0; i < numbers.length; i++){
+
+			if(noDin == numbers[i]){
+
+				flag=flase;
+				break;
+
+				}
+			}
+
+
+			if(flag==true){
+				numbers.push(noDin);
+				count++;
+				}	
+
+			}
+		}
+
+		return numbers
+		
+	}
+
+	var numbers = revisaVector(4)
+	console.log(numbers);
+	
+	var input = document.querySelector("input");
+	input.focus();
+
+	</script>

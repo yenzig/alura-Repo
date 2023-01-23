@@ -1,0 +1,17 @@
+<canvas width = "600" height = "400"> </canvas>
+
+
+	<script>
+
+		var screan = document.querySelector("canvas");
+		var brush =  screan.getContext("2d");
+
+		brush.fillRect(0,0,600,400);
+
+
+
+
+
+
+	
+	</script>
